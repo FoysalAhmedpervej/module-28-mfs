@@ -1,17 +1,25 @@
 //alert('add meney js added');
+//console.log('add money loaded');
 document.getElementById('btn-add-money').addEventListener('click',function(event){
     event.preventDefault();
 
-    const addMoney = document.getElementById('add-money-input').value;
-    const pinNumberOne = document.getElementById('pin-input-one').value;
-    console.log(addMoney,pinNumberOne);
 
-    if(pinNumberOne === '1234'){
-       // alert('yout entered correct pin');
-       const totalBalance = document.getElementById('totalBalance').innerText;
-       const newBalance = parseFloat(totalBalance) + parseFloat(addMoney);
-       document.getElementById('totalBalance').innerText = newBalance;
+    //getInputFieldValueById();
+    // const addMoney = getInputFieldValueById();
+    // console.log('add money value ', addMoney);
+
+    const addMoney = getInputFieldValueById('add-money-input');   
+    const pinOne = getInputFieldValueById('pin-input-one');
+    console.log(typeof pinOne)        ;
+
+    //wrong way to verify
+    if(pinOne === 1234){
+        const balance = getTextFieldValueById('totalBalance');
+        const newBalance = balance + addMoney;
+        document.getElementById('totalBalance').innerText = newBalance;
     }else{
-        alert('failed to add money. please try again');
+        alert('Failed to add money');
     }
-})
+    
+
+});

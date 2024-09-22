@@ -1,5 +1,5 @@
 //alert('Feature js added');
-
+//console.log('features loaded')
 document.getElementById('cash-out-switch').addEventListener('click',function(){
 
     // add hidden class to add money section
