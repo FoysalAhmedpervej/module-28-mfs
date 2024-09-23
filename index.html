@@ -21,8 +21,11 @@
                     </div>
                   </div>  
                   <div class="flex mt-2 p-2 gap-1 w-full">
-                    <button id="add-money-switch" class="btn btn-lg">Add Money</button>                   
-                    <button id="cash-out-switch" class="btn btn-lg">Cash Out</button>
+                    <ul class="menu menu-vertical grid grid-cols-3 bg-base-200 rounded-box">
+                      <li><button id="add-money-switch" class="btn btn-md ">Add Money</button></li>
+                      <li><button id="cash-out-switch" class="btn btn-md ">Cash Out</button></li>
+                      <li><button id="transaction-switch" class="btn btn-md ">Transaction</button></li>
+                    </ul>                                                                       
                   </div>           
               <div class="divider"></div>
               <!-- add balance section start -->
@@ -73,6 +76,12 @@
                   </form>
                 </div>
                 <!-- cashout section end -->
+                 <!-- transaction section start -->
+                  <div class="hidden" id="transection-section" >
+                    <h2 class="text-3xl text-center">Transaction History</h2>
+                    <div id="transaction-container" class="space-y-3"></div>
+                  </div>
+                 <!-- transaction section end -->
               </div>
             </div>
           </div>
